@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelForge - Design & Technology Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./Assets/Logo without text and bg.png">
+</head>
+<body>
+    
+
+    <!-- Header -->
+    <header class="fixed-header">
+        <div class="container header">
+            <img src="./Assets/Logo Wide.png" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a class="a1" href="#about">About</a></li>
+                    <li><a class="a2" href="#services">Services</a></li>
+                    <li><a class="a3" href="#testimonials">Testimonials</a></li>
+                    <li><a class="a4" href="#project-form">Start a Project</a></li>
+                    <li><a class="a5" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="space"></div>
+    
+
+
+    <!-- About Us -->
+    <section id="about">
+        <div class="section-space"></div>
+        <div class="container">
+            <p class="title about-title">About Us</p>
+            <p>PixelForge is a cutting-edge design and technology agency dedicated to 
+                bringing ideas to life. We specialize in innovative solutions that enhance 
+                brand identity, streamline technology, and drive business success. 
+                Our team of creative designers and expert developers work together to 
+                deliver outstanding results tailored to your unique needs.
+            </p>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-space"></div>
+        <div class="container">
+            <div>
+                <p class="title service-title">Our Services</p>
+
+                <div class="service-panels">
+                    <div class="panel design-panel">
+                        <p class="subtitle">Design Services</p>
+                        <ul>
+                            <li>Logo & Brand Design</li>
+                            <li>Print & Marketing Design</li>
+                            <li>Packaging & Cover Design</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                    <div class="panel tech-panel">
+                        <p class="subtitle">Technology Services</p>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Mobile Development</li>
+                            <li>Backend & API Development</li>
+                            <li>AI Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="section-space"></div>
+        <div class="container">
+            <p class="title testimonials-title">Testimonials</p>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Project Form -->
+    <section id="project-form">
+        <div class="section-space"></div>
+        <div class="container">
+            <p class="title project-title">Start Your Project</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="company">Company Name (optional)</label>
+                <input type="text" id="company" name="company">
+                
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project-type">
+                    <option value="" selected disabled>Select</option>
+                    <option value="logo">Logo & Brand Design</option>
+                    <option value="print">Print & Marketing Design</option>
+                    <option value="packaging">Packaging & Cover Design</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="web">Web Development</option>
+                    <option value="mobile">Mobile Development</option>
+                    <option value="backend">Backend & API Development</option>
+                    <option value="ai">AI Engineering</option>
+                </select>
+                
+                <label for="budget">Budget Range (optional)</label>
+                <input type="text" id="budget" name="budget">
+                
+                <label for="deadline">Project Deadline</label>
+                <input type="date" id="deadline" name="deadline" required>
+                
+                <label for="description">Project Description</label>
+                <textarea id="description" name="description" rows="8" required></textarea>
+                
+                <label for="file">Upload Reference Files (optional)</label>
+                <input type="file" id="file" name="file" multiple>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    
+    
+
+    <!-- Contact -->
+    <div class="section-space"></div>
+    <footer>
+        <div class="container">
+            <section id="contact">
+                <p class="title contact-title">Contact Us</p>
+                <p>Have questions or complaints? Reach out to us!</p>
+                <div>
+                    <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pixelforge.global@gmail.com" target="_blank">pixelforge.global@gmail.com</a><br>
+                    WhatsApp: +92 03117561796 (Text Only)</p>
+                </div>            </section>
+            <p>&copy; 2025 PixelForge. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
+
