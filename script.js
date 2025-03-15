@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        
+
         
         alert("Thank you for your message! We will get back to you soon.");
         form.reset();
@@ -31,3 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         return re.test(email);
     }
 });
+
+
+
+
+window.history.pushState("", document.title, window.location.pathname);
