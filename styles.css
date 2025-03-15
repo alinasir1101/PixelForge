@@ -100,8 +100,8 @@ nav .a5:hover {
 .logo-container {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 140px;
+    margin-bottom: 15px;
 }
 .logo-container img {
     width: 500px;
@@ -109,6 +109,24 @@ nav .a5:hover {
     object-fit: cover;
     max-width: 100%;
 }
+
+.project-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.project-btn-container a {
+    text-decoration: none;
+    color: #1e1e1e;
+    border: #c2c2c2 1px solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.project-btn-container a:hover {
+    background-color: #e7e7e7;
+}
+
+
 
 
 
@@ -155,8 +173,12 @@ nav .a5:hover {
 }
 #about .plus {
     color: #db8368;
+    font-weight: 600;
 }
 
+#about a {
+    color: #db8368;
+}
 .space {
     padding-top: 20px;
 }
@@ -234,9 +256,24 @@ section {
     background-color: #74b6be;
 }
 
+.service-panels {
+    margin-bottom: 10px;
+}
 .service-panels ul {
     padding: 0;
     text-align: left;
+}
+
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.f {
+    padding: 10px 15px;
+    border: #c2c2c2 1px solid;
+    margin: 5px;
+    border-radius: 10px;
 }
 
 
