@@ -34,5 +34,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default jump
+        const targetID = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetID);
 
-window.history.pushState("", document.title, window.location.pathname);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+
+            // Remove hash from URL after scrolling
+            setTimeout(() => {
+                history.pushState(null, "", window.location.pathname);
+            }, 100); // Delay to ensure scrolling is done
+        }
+    });
+});
