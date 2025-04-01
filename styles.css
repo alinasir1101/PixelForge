@@ -97,34 +97,6 @@ nav .a5:hover {
     background-color: #7DBBC3;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 140px;
-    margin-bottom: 15px;
-}
-.logo-container img {
-    width: 500px;
-    height: auto;
-    object-fit: cover;
-    max-width: 100%;
-}
-
-.project-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-.project-btn-container a {
-    text-decoration: none;
-    color: #1e1e1e;
-    border: #c2c2c2 1px solid;
-    padding: 10px 20px;
-    border-radius: 30px;
-}
-.project-btn-container a:hover {
-    background-color: #e7e7e7;
-}
 
 
 
@@ -140,6 +112,65 @@ nav .a5:hover {
 
 
 /* ----------------------------- Contents ------------------------------  */
+
+
+
+
+
+
+
+
+btn:hover, button:hover {
+    cursor: pointer;
+}
+  
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+    margin-bottom: 15px;
+}
+.logo-container img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.btn-container a {
+    text-decoration: none;
+    color: #1e1e1e;
+    border: #c2c2c2 1px solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+.btn-container a:hover {
+    background-color: #e7e7e7;
+}
+
+.payment-portal {
+    text-decoration: none;
+    color: #1e1e1e;
+    border: #c2c2c2 1px solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.payment-portal:hover {
+    background-color: #e7e7e7;
+}
+
+
+
+
+
+
 
 
 
@@ -364,6 +395,38 @@ button:hover {
 
 
 
+/* Payment Warning */
+
+
+.payment-warning {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.payment-warning p {
+    text-align: center;
+}
+.payment-warning span {
+    font-family: 'Gabarito', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    color: rgb(223, 22, 22);
+}
+.payment-btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -380,10 +443,6 @@ footer {
 footer a {
     color: #DAEDBD;
 }
-
-
-
-
 
 
 
