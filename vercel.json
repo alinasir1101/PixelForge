@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+        { "source": "/apply", "destination": "/apply.html" },
+        { "source": "/team", "destination": "/team.html" }
+    ]
+}
+  
