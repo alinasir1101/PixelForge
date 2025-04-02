@@ -156,6 +156,10 @@ btn:hover, button:hover {
     background-color: #e7e7e7;
 }
 
+
+
+
+
 .payment-portal {
     text-decoration: none;
     color: #1e1e1e;
@@ -167,6 +171,16 @@ btn:hover, button:hover {
     background-color: #e7e7e7;
 }
 
+.apply-btn {
+    text-decoration: none;
+    color: #1e1e1e;
+    border: #c2c2c2 1px solid;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.apply-btn:hover {
+    background-color: #e7e7e7;
+}
 
 
 
@@ -353,7 +367,6 @@ section {
     color: #444;
 }
 .step p {
-    font-size: 14px;
     color: #666;
     margin-top: 8px;
 }
