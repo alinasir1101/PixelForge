@@ -395,11 +395,18 @@ button:hover {
 
 
 
-/* Payment Warning */
+/* Payment */
 
+
+.payment-title {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #9eb67b;
+}
 
 .payment-warning {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -416,7 +423,21 @@ button:hover {
     display: flex;
     justify-content: center;
 }
-
+.contact-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-txt div {
+    border: #ccc solid 1px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.contact-txt a {
+    color: #80995a;
+    margin: 0 5px;
+}
 
 
 
@@ -437,7 +458,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0 50px;
-    margin-top: 90px;
+    margin-top: 150px;
 }
 
 footer a {
