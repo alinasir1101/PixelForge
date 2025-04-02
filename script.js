@@ -1,7 +1,7 @@
 
 // Form submit
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     emailjs.init("fe7oehXSN4bVGdPO4"); // Replace with your EmailJS Public Key
     const form = document.querySelector("form");
     
@@ -68,23 +68,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// // Scroll Animation
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener("click", function(event) {
-//         event.preventDefault(); // Prevent default jump
-//         const targetID = this.getAttribute("href").substring(1);
-//         const targetElement = document.getElementById(targetID);
 
-//         if (targetElement) {
-//             targetElement.scrollIntoView({ behavior: "smooth" });
+// # in URL
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default jump
+        const targetID = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetID);
 
-//             // Remove hash from URL after scrolling
-//             setTimeout(() => {
-//                 history.pushState(null, "", window.location.pathname);
-//             }, 100); // Delay to ensure scrolling is done
-//         }
-//     });
-// });
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+
+            // Remove hash from URL after scrolling
+            setTimeout(() => {
+                history.pushState(null, "", window.location.pathname);
+            }, 100); // Delay to ensure scrolling is done
+        }
+    });
+});
 
 
 

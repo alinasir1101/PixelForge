@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333;
+    font-size: 15px;
 }
 
 .container {
@@ -269,6 +270,12 @@ section {
     color: #E5B181;
 }
 
+.service-slogan {
+    margin-top: 0;
+    color: #313131;
+    font-size: 16px;
+}
+
 .panel {
     border-radius: 20px;
     padding: 10px 40px;
@@ -279,7 +286,7 @@ section {
 
 
 .panel .line {
-    border-bottom: #ccc 1px solid;
+    border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
 }
 
 .design-panel {
@@ -298,16 +305,75 @@ section {
     text-align: left;
 }
 
+
+
+
+
+.how-it-works {
+    padding: 30px 10px;
+    /* background-color: #fafafa; */
+    text-align: center;
+    border-radius: 20px;
+}
+.how-it-works h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e2a871;
+    margin: 0;
+}
+.how-it-works p {
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    flex-wrap: wrap;
+}
+.step-title {
+    color: #dba26d !important;
+}
+.step {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: fit-content;
+    border: #f1f1f1 solid 1px;
+}
+.step span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+.step p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+
+
+
+
 .facts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
 }
 .f {
     padding: 10px 15px;
-    border: #c2c2c2 1px solid;
+    border: #e4e4e4 1px solid;
     margin: 5px;
     border-radius: 10px;
+    background-color: white;
 }
 
 
