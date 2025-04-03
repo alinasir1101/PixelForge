@@ -198,7 +198,9 @@ btn:hover, button:hover {
 
 
 
-
+/* #about .container {
+    border: #0e0e0e solid 1px;
+} */
 .founder {
     width: 400px;
     height: auto;
@@ -248,6 +250,7 @@ btn:hover, button:hover {
 .mission-subtitle {
     color: #e68b70;
     font-size: 22px !important;
+    margin: 10px 0;
 }
 
 .subtitle {
@@ -261,7 +264,9 @@ section {
     text-align: center;
     
 }
-
+.founder-section {
+    margin-top: 20px;
+}
 
 
 
@@ -288,13 +293,14 @@ section {
 
 .service-slogan {
     margin-top: 0;
+    margin-bottom: 10px;
     color: #313131;
     font-size: 16px;
 }
 
 .panel {
     border-radius: 20px;
-    padding: 10px 40px;
+    padding: 15px 40px 30px;
     margin: 3px 5px;
     max-width: 300px;
 }
@@ -311,6 +317,9 @@ section {
 
 .tech-panel {
     background-color: #74b6be;
+}
+.panel .subtitle {
+    margin: 10px 0;
 }
 
 .service-panels {
@@ -504,14 +513,20 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+.payment {
+    padding: 0 30px;
+}
 .contact-txt {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    line-height: 20px;
 }
 .contact-txt div {
     border: #ccc solid 1px;
-    padding: 5px;
+    padding: 0px 6px 0px 4px;
     border-radius: 5px;
     margin: 0 5px;
 }
@@ -544,6 +559,9 @@ footer {
 
 footer a {
     color: #DAEDBD;
+}
+#contact div {
+    margin: 10px 0;
 }
 
 
