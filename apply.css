@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px 0;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 15px;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+.title {
+    color: #aec58c;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.container {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: #ccc 1px solid;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    padding: 0 30px;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+}
+#hours {
+    max-width: 50px;
+}
+
+select {
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    border: #ccc 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.line {
+    border-top: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+p {
+    margin-bottom: 50px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #aec58c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9eb67b;
+}

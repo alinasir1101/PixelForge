@@ -9,6 +9,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    Hi
+    <div class="img-container">
+        <img src="./Assets/Logo Wide.png" alt="Logo">
+    </div>
+
+    
+    <!-- Form -->
+    <div class="container">
+        <p class="title">Fill out this Application Form</p>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="role">Role you want to apply for in PixelForge?</label>
+            <select id="role" name="role" required>
+                <option value="" selected disabled>Select</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Sales Representative">Sales Representative</option>
+                <option value="Human Resource Manager">Human Resource Manager</option>
+                <option value="Logo & Brand Designer">Logo & Brand Designer</option>
+                <option value="Print & Marketing Designer">Print & Marketing Designer</option>
+                <option value="Packaging & Cover Designer">Packaging & Cover Designer</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Mobile Developer">Mobile Developer</option>
+                <option value="Backend & API Developer">Backend & API Developer</option>
+                <option value="AI Engineer">AI Engineer</option>
+            </select>
+
+            <label for="hours">How many hours per week do you have available to dedicate to your job in PixelForge?</label>
+            <input type="number" id="hours" name="hours" min="0" max="140" required>
+
+            <div class="line"></div>
+
+            <p>Provide at least one of these links:</p>
+            
+            <label for="portfolio">Portfolio Link</label>
+            <input type="text" id="portfolio" name="portfolio">
+            
+            <label for="cv">CV Link</label>
+            <input type="text" id="cv" name="cv">
+
+            <label for="linkedin">LinkedIn Profile Link</label>
+            <input type="text" id="linkedin" name="linkedin">
+            
+            <!-- <label for="description">Why should we hire you?</label>
+            <textarea id="description" name="description" rows="8" required></textarea> -->
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="./apply.js"></script>
 </body>
 </html>
