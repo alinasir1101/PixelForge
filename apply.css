@@ -27,6 +27,9 @@ img {
 .container {
     text-align: center;
 }
+p {
+    margin: 0 40px;
+}
 
 form {
     max-width: 500px;
