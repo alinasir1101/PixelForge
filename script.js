@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     emailjs.init("fe7oehXSN4bVGdPO4"); // Replace with your EmailJS Public Key
     const form = document.querySelector("form");
+
+    // Get the query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    // Extract the value of 'ref' (recruiter ID)
+    const referrer = urlParams.get('ref');
     
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -18,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const message = `
         Company Name: ${company}\n
+        Referred by: ${referrer}\n
         Project Type: ${projectType}\n
         Budget: ${budget}\n
         Deadline (yyyy-mm-dd): ${deadline}\n
@@ -25,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
         
         
-        if (name === "" || email === "" || description === "") {
-            alert("Please fill in all fields.");
-            return;
-        }
+        // if (name === "" || email === "" || description === "") {
+        //     alert("Please fill in all fields.");
+        //     return;
+        // }
         
         if (!validateEmail(email)) {
             alert("Please enter a valid email address.");

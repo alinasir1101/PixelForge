@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     emailjs.init("fe7oehXSN4bVGdPO4"); // Replace with your EmailJS Public Key
     const form = document.querySelector("form");
+    
     // Get the query parameters from the URL
     const urlParams = new URLSearchParams(window.location.search);
     // Extract the value of 'ref' (recruiter ID)
