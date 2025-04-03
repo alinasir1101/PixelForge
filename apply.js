@@ -7,6 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     // Extract the value of 'ref' (recruiter ID)
     const referrer = urlParams.get('ref');
+
+
+    document.getElementById('role').addEventListener('change', function() {
+        var selectValue = this.value;
+        var portfolioField = document.getElementById('portfolio');
+        var portfolioLabel = document.getElementById('portfolioLabel');
+      
+        if (selectValue === 'Sales Representative' || selectValue === 'Human Resource Manager') {
+            portfolioField.style.display = 'none';
+            portfolioLabel.style.display = 'none';  
+        } else {
+            portfolioField.style.display = 'inline-block';
+            portfolioLabel.style.display = 'inline';   
+        }
+    });
+      
     
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -29,36 +45,40 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
         
         
-        // if (name === "" || email === "" || description === "") {
-        //     alert("Please fill in all fields.");
-        //     return;
-        // }
-        
-        if (!validateEmail(email)) {
-            alert("Please enter a valid email address.");
+        if (portfolio || cv || linkedin) {
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+    
+    
+            const templateParams = {
+                title: "Application Request",
+                name,
+                email,
+                message
+            }
+    
+    
+            // Send email
+            emailjs.send("service_nqec55z", "template_nlureb4", templateParams)
+            .then(function (response) {
+                console.log("Success:", response);
+            }, function (error) {
+                console.log("Error:", error);
+            });
+    
+    
+            alert("Thank you for your Application submission! If your application is in line with what we are looking for, we will contact you to continue with the selection process. Otherwise, you will not receive further communications.");
+            form.reset();
+
+        } else {
+            alert("Please provide any of these links.");
             return;
         }
-
-
-        const templateParams = {
-            title: "Application Request",
-            name,
-            email,
-            message
-        }
-
-
-        // Send email
-        emailjs.send("service_nqec55z", "template_nlureb4", templateParams)
-        .then(function (response) {
-            console.log("Success:", response);
-        }, function (error) {
-            console.log("Error:", error);
-        });
-
         
-        alert("Thank you for your Application submission! If your application is in line with what we are looking for, we will contact you to continue with the selection process. Otherwise, you will not receive further communications.");
-        form.reset();
+        
     });
     
     function validateEmail(email) {

@@ -22,6 +22,7 @@ img {
     font-family: 'Gabarito', sans-serif;
     font-size: 30px;
     margin-top: 5px;
+    margin-bottom: 0;
 }
 .container {
     text-align: center;
@@ -30,7 +31,7 @@ img {
 form {
     max-width: 500px;
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -70,8 +71,9 @@ select {
     margin: 20px 0;
 }
 
-p {
-    margin-bottom: 50px;
+.subtitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
 button {
