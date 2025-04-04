@@ -9,25 +9,66 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     // Extract the value of 'ref' (recruiter ID)
     const referrer = urlParams.get('ref');
+
+
+    document.getElementById('medium').addEventListener('change', function() {
+        var selectValue = this.value;
+        var discordField = document.getElementById('discordUsername');
+        var discordLabel = document.getElementById('discordLabel');
+      
+        if (selectValue === 'Discord') {
+            discordField.style.display = 'inline-block';
+            discordField.required = true;
+            discordLabel.style.display = 'block';  
+        } else {
+            discordField.style.display = 'none';
+            discordField.required = false;
+            discordLabel.style.display = 'none';   
+        }
+    });
+
+
+
+
     
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
+        const medium = document.getElementById("medium").value;
+        const discordUsername = document.getElementById("discordUsername").value.trim();
+        var method;
+
+        if (medium == "Discord") {
+            method = `${medium}\n\nDiscord Username: ${discordUsername}`;
+        } else {
+            method = medium;
+        }
+
         const company = document.getElementById("company").value.trim();
-        const projectType = document.getElementById("project-type").value.trim();
+
+        const selectedTypes = Array.from(document.querySelectorAll('input[name="projectOptions"]:checked')).map(input => input.value);
+        if (selectedTypes.length === 0) {
+            alert("Please select at least one project type.");
+            return;
+        }
+
+        // const projectType = document.getElementById("project-type").value.trim();
         const budget = document.getElementById("budget").value.trim();
         const deadline = document.getElementById("deadline").value.trim();
         const description = document.getElementById("description").value.trim();
+        const target = document.getElementById("target").value.trim();
 
         const message = `
+        Preferred Communication Method: ${method}\n
         Company Name: ${company}\n
         Referred by: ${referrer}\n
-        Project Type: ${projectType}\n
+        Project Type: ${selectedTypes.join(", ")}\n
         Budget: ${budget}\n
         Deadline (yyyy-mm-dd): ${deadline}\n
-        Description: ${description}
+        Description and Goals: ${description}\n
+        Target Audience or Customer: ${target}
         `;
         
         

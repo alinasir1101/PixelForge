@@ -454,6 +454,29 @@ input, textarea {
     resize: none;
 }
 
+.checkboxes label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between checkbox and text */
+    margin-right: 16px; /* space between each checkbox group */
+}
+
+.project-txt {
+    margin-top: 15px;
+}
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+}
+.checkboxes {
+    /* display: flex;
+    justify-content: flex-start; */
+    text-align: left;
+    margin: 5px 25px 25px;
+    width: 80%;
+}
+
 select {
     width: 60%;
     padding: 10px;

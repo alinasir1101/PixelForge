@@ -207,11 +207,35 @@
                 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+
+                <label for="medium">What is your preferred communication method?</label>
+                <select id="medium" name="medium" required>
+                    <option value="" selected disabled>Select</option>
+                    <option value="Discord">Discord</option>
+                    <option value="Email">Email</option>
+                    <option value="Zoom">Zoom</option>
+                </select>
+
+                <label for="discordUsername" id="discordLabel" style="display: none;">Discord Username:</label>
+                <input type="text" name="discordUsername" id="discordUsername" style="display: none;">
                 
                 <label for="company">Company Name</label>
                 <input type="text" id="company" name="company" required>
+
+                <p class="project-txt">What service(s) are you looking for?</p>
+                <div class="checkboxes">
+                    <label><input type="checkbox" name="projectOptions" value="Logo/Brand Design"> Logo/Brand Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Print/Marketing Design"> Print/Marketing Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Packaging/Cover Design"> Packaging/Cover Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="UI/UX Design"> UI/UX Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Web Development"> Web Development</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Mobile Development"> Mobile Development</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Backend & API Development"> Backend & API Development</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="AI Engineering"> AI Engineering</label><br>
+                </div>
                 
-                <label for="project-type">Project Type</label>
+                
+                <!-- <label for="project-type">Project Type</label>
                 <select id="project-type" name="project-type" required>
                     <option value="" selected disabled>Select</option>
                     <option value="Logo & Brand Design">Logo & Brand Design</option>
@@ -222,7 +246,7 @@
                     <option value="Mobile Development">Mobile Development</option>
                     <option value="Backend & API Development">Backend & API Development</option>
                     <option value="AI Engineering">AI Engineering</option>
-                </select>
+                </select> -->
                 
                 <label for="budget">Budget Range (optional)</label>
                 <input type="text" id="budget" name="budget">
@@ -230,8 +254,11 @@
                 <label for="deadline">Project Deadline (optional)</label>
                 <input type="date" id="deadline" name="deadline">
                 
-                <label for="description">Project Description</label>
+                <label for="description">Briefly describe your project and goals.</label>
                 <textarea id="description" name="description" rows="8" required></textarea>
+
+                <label for="target">Who is your target audience or customer?</label>
+                <input type="text" id="target" name="target" required>
                 
                 <!-- <label for="file">Upload Reference Files (optional)</label>
                 <input type="file" id="file" name="file" multiple> -->
