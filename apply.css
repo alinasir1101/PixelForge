@@ -95,3 +95,52 @@ button {
 button:hover {
     background: #9eb67b;
 }
+
+/* Chrome, Safari, Edge, Opera */
+.phone::-webkit-inner-spin-button,
+.phone::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.custom-number {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- Webkit Scrollbar ----------------- */
+
+
+::-webkit-scrollbar {
+    width: 8px;  /* Thin vertical scrollbar */
+    height: 8px; /* Thin horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  /* Dark track color */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f19275;  /* Dark thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid transparent;  /* Subtle border for better visibility */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aec58c;  /* Slightly lighter thumb on hover */
+}
+
+/* Optional: Style the corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+    background: #7DBBC3;
+}

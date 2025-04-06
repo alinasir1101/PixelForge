@@ -116,6 +116,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+// Slider
+
+const imageUrls = [];
+for (let i = 1; i <= 20; i++) {
+  imageUrls.push(`Assets/Portfolios/p${i}.png`);
+}
+
+const sliderTrack = document.getElementById("slider-track");
+
+// Duplicate images for seamless infinite effect
+const allImages = [...imageUrls, ...imageUrls];
+allImages.forEach(src => {
+  const img = document.createElement("img");
+  img.src = src;
+  sliderTrack.appendChild(img);
+});
+
+// Wait for images to load, then calculate animation duration
+window.addEventListener("load", () => {
+  const totalWidth = sliderTrack.scrollWidth / 2;
+  const speed = 100; // pixels per second
+  const duration = totalWidth / speed;
+
+  sliderTrack.style.animationDuration = `${duration}s`;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // # in URL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(event) {

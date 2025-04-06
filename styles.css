@@ -42,11 +42,12 @@ body {
 header {
     background: #ffffff;
     color: #0e0e0e;
-    border-bottom: #ccc 1px solid;
+    border-bottom: #dadada 1px solid;
     padding: 0px 0;
     text-align: center;
     position: fixed;
     width: 100%;
+    z-index: 1000;
 }
 
 .header {
@@ -329,6 +330,54 @@ section {
 .service-panels ul {
     padding: 0;
     text-align: left;
+}
+
+
+
+
+.portfolio-title {
+    margin: 20px 30px 10px;
+    color: #dba26d;
+    font-size: 30px;
+}
+.portfolio-title span {
+    color: #aaaaaa;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.slider {
+    width: calc(100vw - 8px);
+    height: 300px; /* fixed height */
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left linear infinite;
+    height: 100%;
+}
+
+.slider-track img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Animation (duration is calculated dynamically via JS) */
+@keyframes scroll-left {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(-50%);
+}
 }
 
 
@@ -645,5 +694,14 @@ footer a {
 @media (max-width: 1000px) {
     header nav {
         display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .panel {
+        margin: 3px 30px;
+    }
+    .slider {
+        height: 200px;
     }
 }
