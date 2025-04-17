@@ -28,11 +28,43 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
+    const checkboxes = [
+        { checkboxId: 'Logo/BrandDesign', divId: 'logo-questions' },
+        { checkboxId: 'Print/MarketingDesign', divId: 'print/marketing-questions' },
+        { checkboxId: 'UI/UXDesign', divId: 'UI/UX-questions' },
+        { checkboxId: 'WebDevelopment', divId: 'web-questions' },
+        { checkboxId: 'MobileDevelopment', divId: 'mobile-questions' },
+        { checkboxId: 'Backend/APIDevelopment', divId: 'backend-questions' }
+    ];
+  
+    let servicesList = [];
+    checkboxes.forEach(item => {
+        const checkbox = document.getElementById(item.checkboxId);
+        const div = document.getElementById(item.divId);
+  
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                div.style.display = 'block';
+                servicesList.push(checkbox.id);
+            } else {
+                div.style.display = 'none';
+                const index = servicesList.indexOf(checkbox.id);
+                if (index !== -1) {
+                    servicesList.splice(index, 1);
+                }
+            }
+            
+        });
+    });
+
+
 
 
     
     form.addEventListener("submit", function(event) {
         event.preventDefault();
+
+        console.log(servicesList);
         
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -54,23 +86,123 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+
+        //Service Questions
+        let services ="";
+
+        if (servicesList.includes('Logo/BrandDesign')) {
+            const mission = document.getElementById("mission");
+            const brand_guidelines = document.getElementById("brand_guidelines");
+            const logo_type = document.getElementById("logo_type");
+            const industry_description = document.getElementById("industry_description");
+            const logo_inspiration = document.getElementById("logo_inspiration");
+            const brand_message = document.getElementById("brand_message");
+
+            services += `
+            LOGO/BRAND DESIGN\n
+            Q: What is your brand's mission and vision?\r\nA: ${mission.value}\n
+            Q: Do you have any existing brand guidelines or color schemes?\r\nA: ${brand_guidelines.value}\n
+            Q: Which Logo type do you prefer?\r\nA: ${logo_type.value}\n
+            Q: Which industry do you work in? What does your company do?\r\nA: ${industry_description.value}\n
+            Q: Any logo inspirations?\r\nA: ${logo_inspiration.value}\n
+            Q: What feeling or message should your brand convey?\r\nA: ${brand_message.value}\n
+            `;
+        }
+        if (servicesList.includes('Print/MarketingDesign')) {
+            const marketing_materials = document.getElementById("marketing_materials");
+            const marketing_preferences = document.getElementById("marketing_preferences");
+            const marketing_size_format = document.getElementById("marketing_size_format");
+            const marketing_content = document.getElementById("marketing_content");
+            const content_creation_help = document.getElementById("content_creation_help");
+
+            services += `
+            PRINT/MARKETING DESIGN\n
+            Q: What types of print or marketing materials do you need?\r\nA: ${marketing_materials.value}\n
+            Q: Any specific branding or design preferences?\r\nA: ${marketing_preferences.value}\n
+            Q: What is the size and format for each item?\r\nA: ${marketing_size_format.value}\n
+            Q: What content or copy needs to be included?\r\nA: ${marketing_content.value}\n
+            Q: Do you need help with content creation?\r\nA: ${content_creation_help.value}\n
+            `;
+        }
+        if (servicesList.includes('UI/UXDesign')) {
+            const uiux_goal = document.getElementById("uiux_goal");
+            const uiux_wireframes = document.getElementById("uiux_wireframes");
+            const uiux_platforms = document.getElementById("uiux_platforms");
+            const uiux_preferences = document.getElementById("uiux_preferences");
+
+            services += `
+            UI/UX DESIGN\n
+            Q: What is the primary goal of your website or app?\r\nA: ${uiux_goal.value}\n
+            Q: Do you have wireframes, sketches, or ideas to share?\r\nA: ${uiux_wireframes.value}\n
+            Q: What platforms do you want your design to work on?\r\nA: ${uiux_platforms.value}\n
+            Q: Any design preferences (colors, style, etc.)?\r\nA: ${uiux_preferences.value}\n
+            `;
+        }
+        if (servicesList.includes('WebDevelopment')) {
+            const web_goal = document.getElementById("web_goal");
+            const web_custom_design = document.getElementById("web_custom_design");
+            const web_features = document.getElementById("web_features");
+            const web_seo = document.getElementById("web_seo");
+
+            services += `
+            WEB DEVELOPMENT\n
+            Q: What is the goal or purpose of the website/Web App?\r\nA: ${web_goal.value}\n
+            Q: Do you need a fully custom design or open to templates?\r\nA: ${web_custom_design.value}\n
+            Q: What are the key features and functionalities you need?\r\nA: ${web_features.value}\n
+            Q: Do you require SEO, marketing integrations, or analytics tools?\r\nA: ${web_seo.value}\n
+            `;
+        }
+        if (servicesList.includes('MobileDevelopment')) {
+            const mobile_platforms = document.getElementById("mobile_platforms");
+            const mobile_features = document.getElementById("mobile_features");
+            const mobile_designs = document.getElementById("mobile_designs");
+            const mobile_integration = document.getElementById("mobile_integration");
+
+            services += `
+            MOBILE DEVELOPMENT\n
+            Q: Do you want the app for iOS, Android, or both?\r\nA: ${mobile_platforms.value}\n
+            Q: What core features would you like the app to have?\r\nA: ${mobile_features.value}\n
+            Q: Do you already have designs or wireframes?\r\nA: ${mobile_designs.value}\n
+            Q: Will the app need to integrate with other services?\r\nA: ${mobile_integration.value}\n
+            `;
+        }
+        if (servicesList.includes('Backend/APIDevelopment')) {
+            const backend_data = document.getElementById("backend_data");
+            const backend_integration = document.getElementById("backend_integration");
+            const backend_scalability = document.getElementById("backend_scalability");
+            const backend_security = document.getElementById("backend_security");
+            const backend_traffic = document.getElementById("backend_traffic");
+
+            services += `
+            BACKEND/API DEVELOPMENT\n
+            Q: What kind of data will the system handle?\r\nA: ${backend_data.value}\n
+            Q: Do you have any existing systems or APIs?\r\nA: ${backend_integration.value}\n
+            Q: What performance or scalability requirements do you have?\r\nA: ${backend_scalability.value}\n
+            Q: Any specific security or compliance needs?\r\nA: ${backend_security.value}\n
+            Q: Expected traffic volume or user load?\r\nA: ${backend_traffic.value}\n
+            `;
+        }
+
+
+
         // const projectType = document.getElementById("project-type").value.trim();
         const budget = document.getElementById("budget").value.trim();
         const deadline = document.getElementById("deadline").value.trim();
-        const description = document.getElementById("description").value.trim();
+        // const description = document.getElementById("description").value.trim();
         const target = document.getElementById("target").value.trim();
 
         const message = `
+        Referred by: ${referrer}\n
         Preferred Communication Method: ${method}\n
         Company Name: ${company}\n
-        Referred by: ${referrer}\n
         Project Type: ${selectedTypes.join(", ")}\n
         Budget: ${budget}\n
         Deadline (yyyy-mm-dd): ${deadline}\n
-        Description and Goals: ${description}\n
-        Target Audience or Customer: ${target}
+        Target Audience or Customer: ${target}\n
+        ${services}
         `;
         
+        console.log(message);
         
         // if (name === "" || email === "" || description === "") {
         //     alert("Please fill in all fields.");
@@ -102,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
         alert("Thank you for your project request submission! We will get back to you soon.");
-        form.reset();
+        // form.reset();
     });
     
     function validateEmail(email) {

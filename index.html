@@ -59,7 +59,7 @@
                 At PixelForge, our mission is to empower businesses with cutting-edge design, technology, and AI-driven solutions that enhance their brand identity and digital presence. We combine creativity with innovation to deliver high-impact branding, UI/UX design, web and mobile development, and AI-powered solutions that drive results.
                 We believe in problem-solving, efficiency, and excellence—helping startups and enterprises scale with visually stunning, performance-driven solutions.
                 Our goal is to bridge the gap between great ideas and successful execution, ensuring that every brand we work with stands out, thrives, and grows in the competitive digital landscape.
-            </p>
+            </p><br>
             <p>
                 We strive for 100% satisfaction. If a project is not delivered as agreed, we offer refunds under specific conditions.
                 <a href="#contact">Contact us</a> to discuss any concerns.
@@ -99,7 +99,7 @@
                         <ul>
                             <li>Logo & Brand Design - Create custom brand identities, logos and fonts.</li><br>
                             <li>Print & Marketing Design - Business cards, brochures, posters, flyer and ad creatives.</li><br>
-                            <li>Packaging & Cover Design - Packaging, book design, album and podcast covers, and labels.</li><br>
+                            <!-- <li>Packaging & Cover Design - Packaging, book design, album and podcast covers, and labels.</li><br> -->
                             <li>UI/UX Design - Design intuitive web and mobile experiences, wireframes, and prototypes.</li><br>
                         </ul>
                         <div class="line"></div>
@@ -117,7 +117,7 @@
                             <li>Web Development - Build custom websites, landing pages, and dynamic web apps.</li><br>
                             <li>Mobile Development - Develop iOS and Android applications.</li><br>
                             <li>Backend & API Development - Implement scalable server-side solutions and API integrations.</li><br>
-                            <li>AI Engineering - Build AI-powered tools, chatbots, and automation solutions.</li><br>
+                            <!-- <li>AI Engineering - Build AI-powered tools, chatbots, and automation solutions.</li><br> -->
                         </ul>
                         <div class="line"></div>
                         <p class="subtitle">Tools used</p>
@@ -126,7 +126,7 @@
                             <li>React Native or Flutter</li>
                             <li>Node.js and Express.js</li>
                             <li>MongoDB</li>
-                            <li>Tensorflow</li>
+                            <!-- <li>Tensorflow</li> -->
                         </ul>
                     </div>
                 </div>
@@ -229,29 +229,21 @@
 
                 <p class="project-txt">What service(s) are you looking for?</p>
                 <div class="checkboxes">
-                    <label><input type="checkbox" name="projectOptions" value="Logo/Brand Design"> Logo/Brand Design</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="Print/Marketing Design"> Print/Marketing Design</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="Packaging/Cover Design"> Packaging/Cover Design</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="UI/UX Design"> UI/UX Design</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="Web Development"> Web Development</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="Mobile Development"> Mobile Development</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="Backend & API Development"> Backend & API Development</label><br>
-                    <label><input type="checkbox" name="projectOptions" value="AI Engineering"> AI Engineering</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Logo/Brand Design" id="Logo/BrandDesign"> Logo/Brand Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Print/Marketing Design" id="Print/MarketingDesign"> Print/Marketing Design</label><br>
+                    <!-- <label><input type="checkbox" name="projectOptions" value="Packaging/Cover Design"> Packaging/Cover Design</label><br> -->
+                    <label><input type="checkbox" name="projectOptions" value="UI/UX Design" id="UI/UXDesign"> UI/UX Design</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Web Development" id="WebDevelopment"> Web Development</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Mobile Development" id="MobileDevelopment"> Mobile Development</label><br>
+                    <label><input type="checkbox" name="projectOptions" value="Backend/API Development" id="Backend/APIDevelopment"> Backend/API Development</label><br>
+                    <!-- <label><input type="checkbox" name="projectOptions" value="AI Engineering"> AI Engineering</label><br> -->
                 </div>
                 
                 
-                <!-- <label for="project-type">Project Type</label>
-                <select id="project-type" name="project-type" required>
-                    <option value="" selected disabled>Select</option>
-                    <option value="Logo & Brand Design">Logo & Brand Design</option>
-                    <option value="Print & Marketing Design">Print & Marketing Design</option>
-                    <option value="Packaging & Cover Design">Packaging & Cover Design</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Mobile Development">Mobile Development</option>
-                    <option value="Backend & API Development">Backend & API Development</option>
-                    <option value="AI Engineering">AI Engineering</option>
-                </select> -->
+                
+
+                <label for="target">Who is your target audience or customer?</label>
+                <input type="text" id="target" name="target" required>
                 
                 <label for="budget">Budget Range (optional)</label>
                 <input type="text" id="budget" name="budget">
@@ -259,14 +251,153 @@
                 <label for="deadline">Project Deadline (optional)</label>
                 <input type="date" id="deadline" name="deadline">
                 
-                <label for="description">Briefly describe your project and goals.</label>
-                <textarea id="description" name="description" rows="8" required></textarea>
-
-                <label for="target">Who is your target audience or customer?</label>
-                <input type="text" id="target" name="target" required>
+                <!-- <label for="description">Briefly describe your project and goals.</label>
+                <textarea id="description" name="description" rows="8" required></textarea> -->
                 
                 <!-- <label for="file">Upload Reference Files (optional)</label>
                 <input type="file" id="file" name="file" multiple> -->
+
+
+
+                
+
+
+
+                <!-- Questions for each of services --> 
+
+                <!-- Logo -->
+                <div id="logo-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set logo/brand">Logo/Brand Design</p>
+
+                    <label for="mission">What is your brand's mission and vision?</label>
+                    <textarea id="mission" name="mission"></textarea>
+
+                    <label for="brand_guidelines">Do you have any existing brand guidelines or color schemes?</label>
+                    <textarea name="brand_guidelines" id="brand_guidelines"></textarea>
+
+                    <label for="logo_type">Which Logo type do you prefer?</label>
+                    <select id="logo_type" name="logo_type">
+                        <option value="" selected disabled>Select</option>
+                        <option value="Not Sure">Not Sure</option>
+                        <option value="Wordmark">Wordmark (Text Only, like Google and Coca-Cola)</option>
+                        <option value="Pictorial">Pictorial Mark (Icon Only, like Apple and Instagram)</option>
+                        <option value="Abstract">Abstract Mark (Like Pepsi and Nike)</option>
+                        <option value="Combination">Combination Mark (Both Text and Icon, like Burger King and Pizza Hut)</option>
+                        <option value="Letter">Letter Mark (Letter Only, like McDonald's and Facebook)</option>
+                        <option value="Emblem">Emblem (Like Harvard University and Lamborghini)</option>
+                        <option value="Mascot">Mascot (Like KFC and Pringles)</option>
+                    </select>
+
+                    <label for="industry_description">Which industry do you work in? What does your company do?</label>
+                    <textarea name="industry_description" id="industry_description"></textarea>
+
+                    <label for="logo_inspiration">Any logo inspirations?</label>
+                    <textarea id="logo_inspiration" name="logo_inspiration"></textarea>
+
+                    <label for="brand_message">What feeling or message should your brand convey?</label>
+                    <textarea id="brand_message" name="brand_message"></textarea>
+                </div>
+
+
+                <!-- print/marketing -->
+                <div id="print/marketing-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set print/marketing">Print/Marketing Design</p>
+                
+                    <label for="marketing_materials">What types of print or marketing materials do you need? (Brochures, Posters, Flyers, Cards, Ad, Banners, etc.)</label>
+                    <textarea id="marketing_materials" name="marketing_materials"></textarea>
+
+                    <label for="marketing_preferences">Any specific branding or design preferences?</label>
+                    <textarea id="marketing_preferences" name="marketing_preferences"></textarea>
+
+                    <label for="marketing_size_format">What is the size and format for each item?</label>
+                    <textarea id="marketing_size_format" name="marketing_size_format"></textarea>
+
+                    <label for="marketing_content">What content or copy needs to be included?</label>
+                    <textarea id="marketing_content" name="marketing_content"></textarea>
+
+                    <label for="content_creation_help">Do you need help with content creation?</label>
+                    <textarea id="content_creation_help" name="content_creation_help"></textarea>
+
+                </div>
+
+
+                <!-- UI/UX -->
+                <div id="UI/UX-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set UI/UX">UI/UX Design</p>
+
+                    <label for="uiux_goal">What is the primary goal of your website or app?</label>
+                    <textarea id="uiux_goal" name="uiux_goal"></textarea>
+
+                    <label for="uiux_wireframes">Do you have wireframes, sketches, or ideas to share?</label>
+                    <textarea id="uiux_wireframes" name="uiux_wireframes"></textarea>
+
+                    <label for="uiux_platforms">What platforms do you want your design to work on?</label>
+                    <textarea id="uiux_platforms" name="uiux_platforms"></textarea>
+
+                    <label for="uiux_preferences">Any design preferences (colors, style, etc.)?</label>
+                    <textarea id="uiux_preferences" name="uiux_preferences"></textarea>
+                </div>
+
+                <!-- web -->
+                <div id="web-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set web">Web Development</p>
+                    
+                    <label for="web_goal">What is the goal or purpose of the website/Web App?</label>
+                    <textarea id="web_goal" name="web_goal"></textarea>
+
+                    <label for="web_custom_design">Do you need a fully custom design or open to templates?</label>
+                    <textarea id="web_custom_design" name="web_custom_design"></textarea>
+
+                    <label for="web_features">What are the key features and functionalities you need?</label>
+                    <textarea id="web_features" name="web_features"></textarea>
+
+                    <label for="web_seo">Do you require SEO, marketing integrations, or analytics tools?</label>
+                    <textarea id="web_seo" name="web_seo"></textarea>
+                </div>
+
+                <!-- mobile -->
+                <div id="mobile-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set mobile">Mobile Development</p>
+                    
+                    <label for="mobile_platforms">Do you want the app for iOS, Android, or both?</label>
+                    <textarea id="mobile_platforms" name="mobile_platforms"></textarea>
+
+                    <label for="mobile_features">What core features would you like the app to have?</label>
+                    <textarea id="mobile_features" name="mobile_features"></textarea>
+
+                    <label for="mobile_designs">Do you already have designs or wireframes?</label>
+                    <textarea id="mobile_designs" name="mobile_designs"></textarea>
+
+                    <label for="mobile_integration">Will the app need to integrate with other services?</label>
+                    <textarea id="mobile_integration" name="mobile_integration"></textarea>
+                </div>
+
+                <!-- backend -->
+                <div id="backend-questions" style="display: none;">
+                    <div class="line"></div>
+                    <p class="service-set Backend">Backend Development</p>
+                    
+                    <label for="backend_data">What kind of data will the system handle?</label>
+                    <textarea id="backend_data" name="backend_data"></textarea>
+
+                    <label for="backend_integration">Do you have any existing systems or APIs?</label>
+                    <textarea id="backend_integration" name="backend_integration"></textarea>
+
+                    <label for="backend_scalability">What performance or scalability requirements do you have?</label>
+                    <textarea id="backend_scalability" name="backend_scalability"></textarea>
+
+                    <label for="backend_security">Any specific security or compliance needs?</label>
+                    <textarea id="backend_security" name="backend_security"></textarea>
+
+                    <label for="backend_traffic">Expected traffic volume or user load?</label>
+                    <textarea id="backend_traffic" name="backend_traffic"></textarea>
+                </div>
+
                 
                 <button type="submit">Submit</button>
             </form>

@@ -339,10 +339,11 @@ section {
     color: #dba26d;
     font-size: 30px;
 }
+
 .portfolio-title span {
-    color: #aaaaaa;
+    color: #7c7c7c;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 100;
 }
 
 .slider {
@@ -393,12 +394,11 @@ section {
     font-size: 24px;
     font-weight: bold;
     color: #e2a871;
-    margin: 0;
+    margin: 0 30px;
 }
 .how-it-works p {
     color: #666;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin: 5px 30px 20px;
 }
 .steps {
     display: flex;
@@ -489,7 +489,7 @@ form {
 
 label {
     display: block;
-    margin-top: 10px;
+    margin: 10px 40px 0;
 }
 
 input, textarea {
@@ -532,6 +532,17 @@ select {
     border: #ccc 1px solid;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.line {
+    border-top: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+.service-set {
+    margin: 30px 5px;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 20px;
 }
 
 button {
