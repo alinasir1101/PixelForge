@@ -23,6 +23,29 @@ document.addEventListener("DOMContentLoaded", function() {
             portfolioLabel.style.display = 'inline';   
         }
     });
+
+
+
+
+    // Phone
+    const phone_input = document.querySelector("#phone");
+
+    const iti = window.intlTelInput(phone_input, {
+        initialCountry: "pk", // or "auto"
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
+        separateDialCode: true
+    });
+    phone_input.addEventListener("input", () => {
+        phone_input.value = phone_input.value.replace(/\D/g, ''); // removes non-digits
+    });
+    phone_input.addEventListener("keypress", (e) => {
+        if (!/[0-9]/.test(e.key)) {
+          e.preventDefault(); // block any non-numeric key
+        }
+    });
+
+
+
       
     
     form.addEventListener("submit", function(event) {
@@ -30,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
+        const fullPhoneNumber = iti.getNumber(); // e.g. "+92 300 1234567"
         const role = document.getElementById("role").value;
         const hours = document.getElementById("hours").value;
         const portfolio = document.getElementById("portfolio").value.trim();
@@ -38,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const message = `
         Referred by: ${referrer}\n
+        Phone Number: ${fullPhoneNumber}\n
         Role: ${role}\n
         Weekly Hours Available: ${hours}\n
         Portfolio Link: ${portfolio}\n
@@ -70,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log("Error:", error);
             });
     
+            console.log(message);
     
             alert("Thank you for your Application submission! If your application is in line with what we are looking for, we will contact you to continue with the selection process. Otherwise, you will not receive further communications.");
             form.reset();

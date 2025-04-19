@@ -39,6 +39,7 @@ form {
     padding: 20px;
     border-radius: 10px;
     border: #ccc 1px solid;
+    justify-content: center;
 }
 
 label {
@@ -68,6 +69,43 @@ select {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
+
+/* .phone-inputs {
+    display: flex;
+    justify-content: center;
+}
+.phone-inputs div {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+}
+#phone-code {
+    width: 80px;
+} */
+
+
+#phone {
+    width: fit-content;
+    /* padding: 5px; */
+    /* margin: 5px 10px 30px; */
+}
+.iti__selected-flag {
+    background-color: white !important;
+    border-radius: 8px 0 0 8px;
+}
+.iti input:focus,
+.iti__flag-container:focus,
+.iti__selected-flag:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #999 !important; /* Optional: subtle border on focus */
+}
+.iti {
+    margin: 5px 0 10px; /* top & bottom: 20px, left & right: 0 */
+}
+  
+  
 
 .line {
     border-top: #ccc solid 1px;

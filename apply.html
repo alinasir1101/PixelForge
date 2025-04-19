@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="apply.css">
     <link rel="icon" type="image/png" href="./Assets/Logo without text and bg.png">
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600&display=swap" rel="stylesheet">
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.css">
 </head>
 <body>
     <div class="img-container">
@@ -25,14 +27,18 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
-            <!-- <label for="phone">Phone Number</label>
-            <div>
-                <select name="phone-code" id="phone-code">
-                    <option value="" selected disabled>Select</option>
-                </select>
-                <input type="number" id="phone" name="phone" class="phone" required>
+            <label for="phone">Phone Number</label>
+            <!-- <div class="phone-inputs">
+                <div>
+                    <select name="phone-code" id="phone-code">
+                        <option value="" selected disabled>Select</option>
+                    </select>
+                    <input type="tel" id="phone" name="phone" class="phone" required>
+                </div>
             </div> -->
-            
+
+            <input id="phone" type="tel" placeholder="e.g. 3331234567" />
+
             
             <label for="role">Role you want to apply for in PixelForge?</label>
             <select id="role" name="role" required>
@@ -46,7 +52,6 @@
                 <option value="UI/UX Designer">UI/UX Designer</option>
                 <option value="React.js Developer">React.js Developer</option>
                 <option value="React Native Developer">React Native Developer</option>
-                <option value="Flutter Developer">Flutter Developer</option>
                 <option value="Node.js Developer">Node.js Developer</option>
                 <option value="Tensorflow Developer">Tensorflow Developer</option>
             </select>
@@ -74,6 +79,9 @@
         </form>
     </div>
 
+    <!-- Dependencies FIRST -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./apply.js"></script>
 </body>
