@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const phone_input = document.querySelector("#phone");
 
     const iti = window.intlTelInput(phone_input, {
-        initialCountry: "pk", // or "auto"
+        initialCountry: "us", // or "auto"
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
         separateDialCode: true
     });
@@ -52,9 +52,12 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         
         const name = document.getElementById("name").value.trim();
+        const role = document.getElementById("role").value;
         const email = document.getElementById("email").value.trim();
         const fullPhoneNumber = iti.getNumber(); // e.g. "+92 300 1234567"
-        const role = document.getElementById("role").value;
+        const discord = document.getElementById("discord").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const experience = document.getElementById("experience").value;
         const hours = document.getElementById("hours").value;
         const portfolio = document.getElementById("portfolio").value.trim();
         const cv = document.getElementById("cv").value.trim();
@@ -62,8 +65,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const message = `
         Referred by: ${referrer}\n
-        Phone Number: ${fullPhoneNumber}\n
         Role: ${role}\n
+        Phone Number: ${fullPhoneNumber}\n
+        Discord Username: ${discord}\n
+        Home Address: ${address}\n
+        Years of Experience: ${experience}\n
         Weekly Hours Available: ${hours}\n
         Portfolio Link: ${portfolio}\n
         CV Link: ${cv}\n
@@ -87,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
     
     
-            // Send email
+            // Send email to careers@pixelforgeagency.org
             emailjs.send("service_nqec55z", "template_nlureb4", templateParams)
             .then(function (response) {
                 console.log("Success:", response);
