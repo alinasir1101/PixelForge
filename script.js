@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     const checkboxes = [
-        { checkboxId: 'Logo/BrandDesign', divId: 'logo-questions' },
-        { checkboxId: 'Print/MarketingDesign', divId: 'print/marketing-questions' },
+        // { checkboxId: 'Logo/BrandDesign', divId: 'logo-questions' },
+        // { checkboxId: 'Print/MarketingDesign', divId: 'print/marketing-questions' },
         { checkboxId: 'UI/UXDesign', divId: 'UI/UX-questions' },
         { checkboxId: 'WebDevelopment', divId: 'web-questions' },
         { checkboxId: 'MobileDevelopment', divId: 'mobile-questions' },
