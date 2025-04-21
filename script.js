@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Slider
 
 const imageUrls = [];
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 13; i++) {
   imageUrls.push(`Assets/Portfolios/p${i}.png`);
 }
 
