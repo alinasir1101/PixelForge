@@ -280,7 +280,7 @@ async function sendEmailsPeriodically() {
     }
 
     // Wait random 1.5 - 2.5 hours before next request
-    const delay = randomDelay(1.5, 2.5);
+    const delay = randomDelay(3.5, 4.5);
     console.log(`Next email in ${delay / 1000 / 60 / 60} hours`);
     await sleep(delay);
   }
