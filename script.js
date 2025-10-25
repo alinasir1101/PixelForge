@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
+// ------- Periodically get backend to send emails to leads ------------------
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
