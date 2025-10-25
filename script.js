@@ -272,6 +272,7 @@ async function sendEmailsPeriodically() {
   while (true) {
     try {
       const res = await fetch('https://email-automation-pixelforge.onrender.com/send-email');
+    //   const res = await fetch('https:///send-email');
       const text = await res.text();
       console.log(text);
     } catch (err) {
