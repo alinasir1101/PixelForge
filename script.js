@@ -259,35 +259,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ------- Periodically get backend to send emails to leads ------------------
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+// function sleep(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
-// Random delay between min and max hours
-function randomDelay(minHours, maxHours) {
-  return (Math.random() * (maxHours - minHours) + minHours) * 60 * 60 * 1000;
-}
+// // Random delay between min and max hours
+// function randomDelay(minHours, maxHours) {
+//   return (Math.random() * (maxHours - minHours) + minHours) * 60 * 60 * 1000;
+// }
 
-async function sendEmailsPeriodically() {
-  while (true) {
-    try {
-      const res = await fetch('https://email-automation-pixelforge.onrender.com/send-email');
-    //   const res = await fetch('https:///send-email');
-      const text = await res.text();
-      console.log(text);
-    } catch (err) {
-      console.error('Error sending email:', err);
-    }
+// async function sendEmailsPeriodically() {
+//   while (true) {
+//     try {
+//       const res = await fetch('https://email-automation-pixelforge.onrender.com/send-email');
+//     //   const res = await fetch('https:///send-email');
+//       const text = await res.text();
+//       console.log(text);
+//     } catch (err) {
+//       console.error('Error sending email:', err);
+//     }
 
-    // Wait random 1.5 - 2.5 hours before next request
-    const delay = randomDelay(3.5, 4.5);
-    console.log(`Next email in ${delay / 1000 / 60 / 60} hours`);
-    await sleep(delay);
-  }
-}
+//     // Wait random 1.5 - 2.5 hours before next request
+//     const delay = randomDelay(3.5, 4.5);
+//     console.log(`Next email in ${delay / 1000 / 60 / 60} hours`);
+//     await sleep(delay);
+//   }
+// }
 
-// Start the loop
-sendEmailsPeriodically();
+// // Start the loop
+// sendEmailsPeriodically();
 
 
 
