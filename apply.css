@@ -7,6 +7,14 @@ body {
     color: #333;
     font-size: 15px;
 }
+
+
+/* Disable blue highlight on mobile buttons/links */
+button, a, input, textarea {
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight (Android/iOS) */
+    outline: none;                            /* Removes focus outline */
+}
+
 .img-container {
     display: flex;
     justify-content: center;

@@ -28,6 +28,11 @@ body {
 }
 
 
+/* Disable blue highlight on mobile buttons/links */
+button, a, input, textarea {
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight (Android/iOS) */
+    outline: none;                            /* Removes focus outline */
+}
 
 
 
@@ -657,8 +662,8 @@ footer a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
