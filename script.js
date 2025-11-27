@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// Slider
+// Images Slider
 
 const imageUrls = [];
 for (let i = 1; i <= 13; i++) {

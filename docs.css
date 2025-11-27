@@ -1,0 +1,83 @@
+body {
+    font-family: 'Gabarito', sans-serif;
+    margin: 0;
+    padding: 50px 0;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 15px;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+.title {
+    color: #a2bb7c;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 50px;
+    border: #ccc 1px solid;
+    justify-content: center;
+}
+p {
+    margin: 0;
+}
+.bold {
+    margin-bottom: 0;
+}
+footer {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #799252;
+}
+
+
+
+
+
+
+
+
+/* ----------- Webkit Scrollbar ----------------- */
+
+
+::-webkit-scrollbar {
+    width: 8px;  /* Thin vertical scrollbar */
+    height: 8px; /* Thin horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  /* Dark track color */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f19275;  /* Dark thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid transparent;  /* Subtle border for better visibility */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aec58c;  /* Slightly lighter thumb on hover */
+}
+
+/* Optional: Style the corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+    background: #7DBBC3;
+}
+

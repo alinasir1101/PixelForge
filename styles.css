@@ -228,7 +228,11 @@ btn:hover, button:hover {
 }
 
 #about a {
-    color: #db8368;
+    color: #c9775f;
+    text-decoration: none;
+}
+.linkedin-link {
+    margin: 10px;
 }
 .space {
     padding-top: 20px;
@@ -268,6 +272,7 @@ section {
 .founder-section {
     margin-top: 20px;
 }
+
 
 
 
@@ -614,6 +619,7 @@ button:hover {
     margin: 0 5px;
 }
 .contact-txt a {
+    text-decoration: none;
     color: #80995a;
     margin: 0 5px;
 }
@@ -639,12 +645,20 @@ footer {
     padding: 10px 0 50px;
     margin-top: 150px;
 }
-
 footer a {
-    color: #DAEDBD;
+    color: #ffd2a9;
+    text-decoration: none;
 }
 #contact div {
     margin: 10px 0;
+}
+.docs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 
