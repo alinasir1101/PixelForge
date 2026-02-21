@@ -466,6 +466,97 @@ section {
 
 
 
+
+.quest-lab {
+    margin: 25px auto 5px;
+    max-width: 760px;
+    background: linear-gradient(135deg, #fff7ef, #fff);
+    border: 1px solid #f2ddcb;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+}
+
+.quest-lab .subtitle {
+    color: #d18650;
+}
+
+.quest-description {
+    color: #555;
+    margin: 6px 0 15px;
+}
+
+.quest-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.quest-chip {
+    width: auto;
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #f1c9ab;
+    background: #fff;
+    color: #7d5a40;
+    font-size: 14px;
+}
+
+.quest-chip:hover {
+    background: #fff3e7;
+}
+
+.quest-chip.active {
+    background: #e68b70;
+    color: white;
+    border-color: #e68b70;
+}
+
+.quest-scoreboard {
+    margin-top: 14px;
+}
+
+.quest-score-text {
+    font-family: 'Gabarito', sans-serif;
+    color: #6d4f37;
+    margin-bottom: 8px;
+}
+
+.quest-progress-bar {
+    height: 10px;
+    border-radius: 999px;
+    background: #f3e6da;
+    overflow: hidden;
+}
+
+.quest-progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #e68b70, #aec58c);
+    transition: width 0.25s ease;
+}
+
+.quest-result {
+    margin-top: 10px;
+    color: #555;
+}
+
+.quest-cta {
+    display: inline-block;
+    margin-top: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #dba26d;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+.quest-cta:hover {
+    background: #ca915b;
+}
+
 /* Testimonials */
 
 .testimonials-title {

@@ -61,6 +61,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
+
+    const questChips = document.querySelectorAll('.quest-chip');
+    const questScoreEl = document.getElementById('quest-score');
+    const questFillEl = document.getElementById('quest-progress-fill');
+    const questResultEl = document.getElementById('quest-result');
+
+    if (questChips.length && questScoreEl && questFillEl && questResultEl) {
+        const recommendations = [
+            { min: 0, text: 'Pick at least 3 priorities to reveal your custom roadmap.' },
+            { min: 40, text: 'Solid start: we recommend a focused MVP sprint with conversion-first UX.' },
+            { min: 70, text: 'Strong momentum: you are ready for a growth-ready product build and launch support.' },
+            { min: 90, text: 'Elite launch profile: ideal for premium design + scalable engineering rollout.' }
+        ];
+
+        const updateQuestScore = () => {
+            let score = 0;
+            let picks = 0;
+
+            questChips.forEach((chip) => {
+                if (chip.classList.contains('active')) {
+                    score += Number(chip.dataset.score) || 0;
+                    picks += 1;
+                }
+            });
+
+            score = Math.min(score, 100);
+            questScoreEl.textContent = String(score);
+            questFillEl.style.width = `${score}%`;
+
+            const state = recommendations.filter((option) => score >= option.min).pop();
+
+            if (picks < 3) {
+                questResultEl.textContent = recommendations[0].text;
+                return;
+            }
+
+            questResultEl.textContent = state ? state.text : recommendations[0].text;
+        };
+
+        questChips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('active');
+                updateQuestScore();
+            });
+        });
+
+        updateQuestScore();
+    }
+
+
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
